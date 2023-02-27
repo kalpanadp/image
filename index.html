@@ -12,11 +12,12 @@
           <a-assets>
                       
              <img id="btninsta" src="./insta_btn.png" crossorigin="anonymous">
-           
+           <img id="btnyoutube" src="./yt_btn.png" crossorigin="anonymous">
           </a-assets>
           <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable"></a-camera>
           <a-entity id="example-target" mindar-image-target="targetIndex: 0">
             <a-entity id="playbtn" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity> 
+          <a-entity id="ytbtn" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #btnyoutube; opacity: 1; transparent: true; "></a-entity>
         </a-entity>   
     </a-scene>
     <script type="text/javascript">
@@ -36,6 +37,11 @@
          const playbtn = document.querySelector('#playbtn');
          playbtn.addEventListener("click", event => {
        window.location.href = "https://instagram.com/kalpana.prajapati.733";
+       });
+
+       const ytbtn = document.querySelector('#ytbtn');
+         ytbtn.addEventListener("click", event => {
+       window.location.href = "https://youtube.com";
        });
        </script>
        </body>
